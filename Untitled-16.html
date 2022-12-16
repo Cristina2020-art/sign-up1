@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <h1>Sign Up</h1>
+  <form action="signup_process.php" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" name="name" id="name"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="text" name="email" id="email"><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" id="password"><br><br>
+    <input type="submit" value="Sign Up">
+  </form>
+</body>
+
+</html>
+
+<style>
+  body {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  input[type="submit"] {
+    background-color: #00b7f9;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+<script>
+    function validateForm() {
+      var name = document.forms["signupForm"]["name"].value;
+      var email = document.forms["signupForm"]["email"].value;
+      var password = document.forms["signupForm"]["password"].value;
+      if (name == "" || email == "" || password == "") {
+        alert("All fields must be filled out");
+        return false;
+      }
+    }
+  </script>
+  
+</head>
+</body>
